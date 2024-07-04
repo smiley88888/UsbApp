@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UsbApp.MainPage">
+
+    <StackLayout Padding="20">
+        <Label x:Name="StatusLabel" Text="Disconnected" FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Label x:Name="DataLabel" Text="No Data" FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Button Text="Send 1" Clicked="OnSendOneClicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Button Text="Send 0" Clicked="OnSendZeroClicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+    </StackLayout>
+</ContentPage>
