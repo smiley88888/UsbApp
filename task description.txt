@@ -1,0 +1,8 @@
+We are seeking a skilled Xamarin app developer to create an Android app that establishes a USB serial connection.
+The app will be responsible for establishing a stable connection with an external device via USB and exchanging data. 
+This is a critical component of our project and requires someone with experience in Xamarin and USB serial communication. 
+The app should be simple, with 2 labels and 2 buttons, and all code integrated in MainPage.xaml and MainPage.xaml.cs, with additional classes if necessary. (First label for connected/not connected status, second label for the received data) (button1 sends string "1", button2 sends string "0"). 
+USB file /dev/ttyUSB0, baud rate: 115200. 
+Motherboard with Rockchip rk3566, Android 11, kernel: 4.19.232 
+Skills required: - Xamarin - Android app development - USB serial communication 
+As an ideal candidate, you should have a deep understanding of Xamarin, Android app development, and how to establish and maintain a stable USB serial connection.
