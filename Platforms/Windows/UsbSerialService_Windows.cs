@@ -14,11 +14,6 @@ namespace UsbApp.WinUI
 
         public bool IsConnected => _serialPort?.IsOpen ?? false;
 
-        public UsbSerialService_Windows()
-        {
-            _serialPort = new SerialPort("COM3", 115200); // Adjust COM port as needed
-        }
-
         public async Task<bool> ConnectAsync()
         {
             try

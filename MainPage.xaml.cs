@@ -18,7 +18,8 @@ namespace UsbApp
 
             _readCancellationTokenSource = new CancellationTokenSource();
 
-            _usbSerialService = DependencyService.Get<IUsbSerialService>();
+            //_usbSerialService = DependencyService.Get<IUsbSerialService>();
+            _usbSerialService = (Application.Current as App).Services.GetService<IUsbSerialService>();
             if (_usbSerialService == null)
             {
                 throw new InvalidOperationException("Unable to resolve UsbSerialService.");

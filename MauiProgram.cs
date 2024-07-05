@@ -43,13 +43,13 @@ namespace UsbApp
         public static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
         {
 #if ANDROID
-            mauiAppBuilder.Services.AddSingleton<IUsbSerialService, UsbSerialService_Android>();
+            mauiAppBuilder.Services.AddTransient<IUsbSerialService, UsbSerialService_Android>();
 #elif WINDOWS
-            mauiAppBuilder.Services.AddSingleton<IUsbSerialService, UsbSerialService_Windows>();
+            mauiAppBuilder.Services.AddTransient<IUsbSerialService, UsbSerialService_Windows>();
 #elif IOS
-            mauiAppBuilder.Services.AddSingleton<IUsbSerialService, UsbSerialService_iOS>();
+            mauiAppBuilder.Services.AddTransient<IUsbSerialService, UsbSerialService_iOS>();
 #elif MACCATALYST
-            mauiAppBuilder.Services.AddSingleton<IUsbSerialService, UsbSerialService_MacCatalyst>();
+            mauiAppBuilder.Services.AddTransient<IUsbSerialService, UsbSerialService_MacCatalyst>();
 #endif
             // More services registered here.
 
