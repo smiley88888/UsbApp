@@ -2,9 +2,9 @@
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
-using UsbApp.MacCatalyst;
 
-//[assembly: Dependency(typeof(UsbSerialService_MacCatalyst))]
+
+[assembly: Dependency(typeof(UsbApp.MacCatalyst.UsbSerialService_MacCatalyst))]
 namespace UsbApp.MacCatalyst
 {
     public class UsbSerialService_MacCatalyst : IUsbSerialService

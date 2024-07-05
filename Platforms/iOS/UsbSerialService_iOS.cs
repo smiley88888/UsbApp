@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using ExternalAccessory;
 using Foundation;
 using Microsoft.Maui.Controls;
-using UsbApp.iOS;
 
-//[assembly: Dependency(typeof(UsbSerialService_iOS))]
+
+[assembly: Dependency(typeof(UsbApp.iOS.UsbSerialService_iOS))]
 namespace UsbApp.iOS
 {
     public class UsbSerialService_iOS : IUsbSerialService

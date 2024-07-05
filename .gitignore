@@ -4,5 +4,5 @@ git_repos.bat
 # directories
 bin
 obj
-
+.vs
 

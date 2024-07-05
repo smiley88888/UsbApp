@@ -5,9 +5,9 @@ using Android.App;
 using Android.Content;
 using Android.Hardware.Usb;
 using Microsoft.Maui.Controls;
-using UsbApp.Droid;
 
-[assembly: Dependency(typeof(UsbSerialService_Android))]
+
+[assembly: Dependency(typeof(UsbApp.Droid.UsbSerialService_Android))]
 namespace UsbApp.Droid
 {
     public class UsbSerialService_Android : IUsbSerialService

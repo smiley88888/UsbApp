@@ -2,8 +2,10 @@
 using System.IO.Ports;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.PlatformConfiguration;
 
-//[assembly: Dependency(typeof(UsbApp.WinUI.UsbSerialService_Windows))]
+
+[assembly: Dependency(typeof(UsbApp.WinUI.UsbSerialService_Windows))]
 namespace UsbApp.WinUI
 {
     public class UsbSerialService_Windows : IUsbSerialService
@@ -11,6 +13,11 @@ namespace UsbApp.WinUI
         private SerialPort _serialPort;
 
         public bool IsConnected => _serialPort?.IsOpen ?? false;
+
+        public UsbSerialService_Windows()
+        {
+            _serialPort = new SerialPort("COM3", 115200); // Adjust COM port as needed
+        }
 
         public async Task<bool> ConnectAsync()
         {

@@ -3,10 +3,10 @@ using System.Threading.Tasks;
 using Tizen.Applications;
 using Tizen.System;
 using Microsoft.Maui.Controls;
-using UsbApp.Tizen;
 using System.Runtime.CompilerServices;
 
-//[assembly: Dependency(typeof(UsbSerialService_Tizen))]
+
+[assembly: Dependency(typeof(UsbApp.Tizen.UsbSerialService_Tizen))]
 namespace UsbApp.Tizen
 {
     public class UsbSerialService_Tizen : IUsbSerialService

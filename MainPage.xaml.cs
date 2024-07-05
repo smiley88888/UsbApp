@@ -15,11 +15,15 @@ namespace UsbApp
         public MainPage()
         {
             InitializeComponent();
+
+            _readCancellationTokenSource = new CancellationTokenSource();
+
             _usbSerialService = DependencyService.Get<IUsbSerialService>();
             if (_usbSerialService == null)
             {
                 throw new InvalidOperationException("Unable to resolve UsbSerialService.");
             }
+
             InitializeUsbSerial();
         }
 
@@ -35,7 +39,7 @@ namespace UsbApp
 
         private void StartReading()
         {
-            _readCancellationTokenSource = new CancellationTokenSource();
+            
             Task.Run(async () =>
             {
                 var buffer = new byte[1024];
